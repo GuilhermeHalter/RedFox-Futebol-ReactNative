@@ -1,7 +1,21 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
+  const navigation = useNavigation();
+  const handleLogin = () => {
+    const correctUsername = 'usuario';
+    const correctPassword = 'senha';
+    const enteredUsername = 'usuario';
+    const enteredPassword = 'senha';
+
+    if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+      navigation.navigate('Home'); 
+    } else {
+      alert('Login failed. Please check your username and password.');
+    }
+  };
   return (
     <View style={styles.loginContainer}>
        <View style={styles.profileImage}>
@@ -15,7 +29,7 @@ const LoginScreen = () => {
         <View style={styles.inputWrapper}>
           <TextInput style={styles.inputField} placeholder="password" secureTextEntry />
         </View>
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
       </View>
