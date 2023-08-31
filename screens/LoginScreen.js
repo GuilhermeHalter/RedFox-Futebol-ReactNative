@@ -16,6 +16,10 @@ const LoginScreen = () => {
       alert('Login failed. Please check your username and password.');
     }
   };
+  const handleCadastro = () => {
+    navigation.navigate('Cadastro');
+  }
+
   return (
     <View style={styles.loginContainer}>
        <View style={styles.profileImage}>
@@ -31,6 +35,9 @@ const LoginScreen = () => {
         </View>
         <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
           <Text style={styles.loginButtonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.CadastroButton} onPress={handleCadastro}>
+          <Text style={styles.CadastroButtonText}>Clique aqui para se cadastrar no nosso site!!</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -58,9 +65,6 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 60,
-    borderWidth: 3,
-    borderColor: '#fff',
-    shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 10,
@@ -104,6 +108,16 @@ const styles = StyleSheet.create({
   loginButtonText: {
     color: '#fff',
     fontSize: 16,
+    textAlign: 'center',
+  },
+  CadastroButton: {
+    borderRadius: 5,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+  },
+  CadastroButtonText: {
+    color: 'black',
+    fontSize: 10,
     textAlign: 'center',
   },
 });
