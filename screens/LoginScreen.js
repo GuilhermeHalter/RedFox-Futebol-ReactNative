@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
+import { ImageBackground } from 'react-native-web';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -21,8 +22,10 @@ const LoginScreen = () => {
   }
 
   return (
+    <ImageBackground source={require('./img/estadio.jpg')}>
     <View style={styles.loginContainer}>
-       <View style={styles.profileImage}>
+      
+       <View style={styles.profileImage}> 
        <Image style={styles.roundedImage} source={require('./img/pngfind.com-bite-mark-png-631239.png')} />
       </View>
       <View style={styles.loginCard}>
@@ -40,7 +43,9 @@ const LoginScreen = () => {
           <Text style={styles.CadastroButtonText}>Clique aqui para se cadastrar no nosso site!!</Text>
         </TouchableOpacity>
       </View>
+      
     </View>
+    </ImageBackground>
   );
 };
 
@@ -50,7 +55,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '100%',
     backgroundColor: 'linear-gradient(to bottom, #3498db, #2980b9)',
   },
 
@@ -61,7 +65,6 @@ const styles = StyleSheet.create({
   },
 
   roundedImage: {
-    backgroundColor: '#faebd7',
     width: 120,
     height: 120,
     borderRadius: 60,
@@ -72,6 +75,7 @@ const styles = StyleSheet.create({
 
   loginCard: {
     backgroundColor: '#faebd7',
+    borderColor: 'black',
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 10 },

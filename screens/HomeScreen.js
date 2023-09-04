@@ -1,7 +1,7 @@
 import React from 'react';
 import LupaIcon from './img/pngwing.com.png';
 import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity, ImageBackground } from 'react-native';
 
 const HomeScreen = () => {
   return (
@@ -19,15 +19,17 @@ const HomeScreen = () => {
           <Image source={LupaIcon} style={styles.lupaIcon} />
         </View>
         </LinearGradient>
+        <ImageBackground source={require('./img/estadio.jpg')}>
+
       <View style={styles.content}>
         <Text style={styles.contentText}>Jogos da semana</Text>
         
         <View style={styles.imageRow}>
           
           <View style={styles.column}>
-            <Image source={require('./img/pngfind.com-bite-mark-png-631239.png')} style={styles.image} />
+            <Image source={require('./img/bahia.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/pngfind.com-bite-mark-png-631239.png')} style={styles.image} />
+            <Image source={require('./img/fla.png')} style={styles.image} />
             <TouchableOpacity style={styles.CompraButton}>
               <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
@@ -35,24 +37,28 @@ const HomeScreen = () => {
           </View>
           
           <View style={styles.column}>
-            <Image source={require('./img/pngfind.com-bite-mark-png-631239.png')} style={styles.image} />
+            <Image source={require('./img/atlpr.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/pngfind.com-bite-mark-png-631239.png')} style={styles.image} />
+            <Image source={require('./img/coritiba.png')} style={styles.image} />
             <TouchableOpacity style={styles.CompraButton}>
               <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.column}>
-            <Image source={require('./img/pngfind.com-bite-mark-png-631239.png')} style={styles.image} />
+            <Image source={require('./img/botafogo.gif')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/pngfind.com-bite-mark-png-631239.png')} style={styles.image} />
+            <Image source={require('./img/atletico.png')} style={styles.image} />
             <TouchableOpacity style={styles.CompraButton}>
               <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
         </View>
+
       </View>
+      </ImageBackground>
+
+
     </View>
   );
 };
@@ -71,6 +77,7 @@ const styles = StyleSheet.create({
     height: 60,
   },
   menuItem: {
+    padding: '20',
     color: '#fff',
     fontSize: 18,
     marginRight:10,
@@ -113,8 +120,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 100,
-    height: 100,
+    width: '90px',
+    height: '90px',
     marginBottom: 10,
   },
   vsText: {

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ImageBackground} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const CadastroScreen = () => {
@@ -17,18 +17,20 @@ const CadastroScreen = () => {
     }
   };
     return (
+      
+      <ImageBackground source={require('./img/estadio.jpg')}>
         <View style={styles.CadastroContainer}>
-        <View style={styles.profileImage}>
-        <Image style={styles.roundedImage} source={require('./img/pngfind.com-bite-mark-png-631239.png')} />
-       </View>
-       <View style={styles.CadastroCard}>
-         <Text style={styles.CadastroTitle}>Cadastro</Text>
-         <View style={styles.inputWrapper}>
+          <View style={styles.profileImage}>
+            <Image style={styles.roundedImage} source={require('./img/pngfind.com-bite-mark-png-631239.png')} />
+          </View>
+          <View style={styles.CadastroCard}>
+            <Text style={styles.CadastroTitle}>Cadastro</Text>
+          <View style={styles.inputWrapper}>
            <TextInput style={styles.inputField} placeholder="username" />
-         </View>
-         <View style={styles.inputWrapper}>
-           <TextInput style={styles.inputField} placeholder="Email" />
-         </View>
+          </View>
+            <View style={styles.inputWrapper}>
+              <TextInput style={styles.inputField} placeholder="Email" />
+            </View>
          <View style={styles.inputWrapper}>
            <TextInput style={styles.inputField} placeholder="password" />
          </View>
@@ -37,22 +39,20 @@ const CadastroScreen = () => {
          </View>
          <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
            <Text style={styles.loginButtonText}>Login</Text>
-         </TouchableOpacity>
-       </View>
-     </View>
+          </TouchableOpacity>
+          </View>
+        </View>      
+      </ImageBackground>
+      
    );
  };
  
  const styles = StyleSheet.create({
    CadastroContainer: {
-     backgroundColor: 'red',
      flex: 1,
      justifyContent: 'center',
      alignItems: 'center',
-     minHeight: '100%',
-     backgroundColor: 'linear-gradient(to bottom, #3498db, #2980b9)',
    },
-
    profileImage: {
      justifyContent: 'center',
      alignItems: 'center',
@@ -62,7 +62,6 @@ const CadastroScreen = () => {
     fontStyle:"italic",
    },
    roundedImage: {
-     backgroundColor: '#faebd7',
      width: 120,
      height: 120,
      borderRadius: 60,
@@ -76,6 +75,7 @@ const CadastroScreen = () => {
  
    CadastroCard: {
      backgroundColor: '#faebd7',
+     borderColor: 'black',
      borderRadius: 10,
      shadowColor: '#000',
      shadowOffset: { width: 0, height: 10 },
@@ -87,6 +87,7 @@ const CadastroScreen = () => {
    CadastroTitle:{ 
      fontSize: 28,
      marginBottom: 20,
+     borderRadius: 10,
      textAlign: 'center',
      color: '#333',
    },
@@ -109,11 +110,16 @@ const CadastroScreen = () => {
      paddingVertical: 12,
      paddingHorizontal: 20,
    },
+   ImageBackground: {
+    height: '100%',
+    width: '100%'
+   },
    loginButtonText: {
      color: '#fff',
      fontSize: 16,
      textAlign: 'center',
    },
+   
  });
 
  export default CadastroScreen;
