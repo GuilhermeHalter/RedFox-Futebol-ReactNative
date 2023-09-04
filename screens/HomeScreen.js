@@ -7,6 +7,16 @@ const HomeScreen = () => {
   return (
     <View style={styles.bodyContainer}>
 
+        <View style={styles.container}>
+          <View style={styles.menu}>
+            <Text style={styles.menuItem}>Home</Text>
+            <View style={styles.searchBar}>
+              <TextInput placeholder="Search" style={styles.searchInput} />
+              <Image source={LupaIcon} style={styles.lupaIcon} />
+            </View>
+          </View>
+        </View>
+
       <ImageBackground source={require('./img/estadio.jpg')}>
 
         <View style={styles.container}>
@@ -80,12 +90,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     height: 60,
+    width:'center',
+    backgroundColor:'gray'
   },
   menuItem: {
     padding: '20',
     color: '#fff',
     fontSize: 18,
     marginRight:10,
+    color:'black'
   },
   searchBar: {
     flexDirection: 'row',
