@@ -5,61 +5,66 @@ import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity, ImageBackgr
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
-       <LinearGradient
-        colors={['#ff0000', '#ff4d4d']} // Cores do gradiente
-        start={[0, 0]} // Ponto de início do gradiente
-        end={[1, 0]} // Ponto de fim do gradiente
-        style={styles.menu}
-        >
-        <Text style={styles.menuItem}>Home</Text>
-        
-        <View style={styles.searchBar}>
-          <TextInput placeholder="Search" style={styles.searchInput} />
-          <Image source={LupaIcon} style={styles.lupaIcon} />
-        </View>
-        </LinearGradient>
-        <ImageBackground source={require('./img/estadio.jpg')}>
+    <View style={styles.bodyContainer}>
 
-      <View style={styles.content}>
-        <Text style={styles.contentText}>Jogos da semana</Text>
-        
-        <View style={styles.imageRow}>
+      <ImageBackground source={require('./img/estadio.jpg')}>
+
+        <View style={styles.container}>
           
-          <View style={styles.column}>
-            <Image source={require('./img/bahia.png')} style={styles.image} />
-            <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/fla.png')} style={styles.image} />
-            <TouchableOpacity style={styles.CompraButton}>
-              <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-            </TouchableOpacity>
+            <View style={styles.content}>
 
-          </View>
-          
-          <View style={styles.column}>
-            <Image source={require('./img/atlpr.png')} style={styles.image} />
-            <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/coritiba.png')} style={styles.image} />
-            <TouchableOpacity style={styles.CompraButton}>
-              <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-            </TouchableOpacity>
-          </View>
+              <Text style={styles.contentText}>Jogos da semana</Text>
+              
+              <View style={styles.imageRow}>
+                
+                <View style={styles.column}>
+                  <Image source={require('./img/bahia.png')} style={styles.image} />
 
-          <View style={styles.column}>
-            <Image source={require('./img/botafogo.gif')} style={styles.image} />
-            <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/atletico.png')} style={styles.image} />
-            <TouchableOpacity style={styles.CompraButton}>
-              <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-            </TouchableOpacity>
-          </View>
+                  <Text style={styles.vsText}>VS</Text>
+
+                  <Image source={require('./img/fla.png')} style={styles.image} />
+
+                  <TouchableOpacity style={styles.CompraButton}>
+                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
+                  </TouchableOpacity>
+
+                </View>
+                
+                <View style={styles.column}>
+
+                  <Image source={require('./img/atlpr.png')} style={styles.image} />
+                  <Text style={styles.vsText}>VS</Text>
+                  <Image source={require('./img/coritiba.png')} style={styles.image} />
+
+                  <TouchableOpacity style={styles.CompraButton}>
+                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
+                  </TouchableOpacity>
+
+                </View>
+
+                <View style={styles.column}>
+
+                  <Image source={require('./img/botafogo.gif')} style={styles.image} />
+
+                  <Text style={styles.vsText}>VS</Text>
+
+                  <Image source={require('./img/atletico.png')} style={styles.image} />
+
+                  <TouchableOpacity style={styles.CompraButton}>
+                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
+                  </TouchableOpacity>
+
+                </View>
+
+              </View>
+
+            </View>
         </View>
 
-      </View>
       </ImageBackground>
 
-
     </View>
+
   );
 };
 
@@ -88,7 +93,6 @@ const styles = StyleSheet.create({
 
     borderBottomColor: '#ccc',
     borderRadius: 5,
-    flex: 1,
   },
   lupaIcon: {
     width: 20,

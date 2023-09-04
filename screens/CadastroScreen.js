@@ -17,8 +17,8 @@ const CadastroScreen = () => {
     }
   };
     return (
-      
-      <ImageBackground source={require('./img/estadio.jpg')}>
+      <ImageBackground source={require('./img/estadio.jpg')} style={styles.ImageBackground}>
+        <View style={styles.bodyContainer}>
         <View style={styles.CadastroContainer}>
           <View style={styles.profileImage}>
             <Image style={styles.roundedImage} source={require('./img/pngfind.com-bite-mark-png-631239.png')} />
@@ -42,8 +42,8 @@ const CadastroScreen = () => {
           </TouchableOpacity>
           </View>
         </View>      
-      </ImageBackground>
-      
+        </View>
+        </ImageBackground>
    );
  };
  
@@ -61,20 +61,27 @@ const CadastroScreen = () => {
    inputWrapper:{
     fontStyle:"italic",
    },
+   bodyContainer:{
+    justifyContent: 'center',
+    alignContent: 'center',
+    height: '90%',
+    width: '100%',
+   },
    roundedImage: {
      width: 120,
      height: 120,
      borderRadius: 60,
-     borderWidth: 3,
-     borderColor: '#fff',
      shadowColor: '#000',
      shadowOffset: { width: 0, height: 4 },
      shadowOpacity: 0.2,
      shadowRadius: 10,
    },
- 
+   ImageBackground: {
+    flex:1,
+    resizeMode: 'cover'
+   },
    CadastroCard: {
-     backgroundColor: '#faebd7',
+     backgroundColor: 'white',
      borderColor: 'black',
      borderRadius: 10,
      shadowColor: '#000',

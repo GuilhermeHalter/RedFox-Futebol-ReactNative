@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ImageBackground} from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-import { ImageBackground } from 'react-native-web';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -22,48 +21,60 @@ const LoginScreen = () => {
   }
 
   return (
-    <ImageBackground source={require('./img/estadio.jpg')}>
-    <View style={styles.loginContainer}>
-      
-       <View style={styles.profileImage}> 
-       <Image style={styles.roundedImage} source={require('./img/pngfind.com-bite-mark-png-631239.png')} />
-      </View>
-      <View style={styles.loginCard}>
-        <Text style={styles.loginTitle}>Login</Text>
-        <View style={styles.inputWrapper}>
-          <TextInput style={styles.inputField} placeholder="username" />
+
+      <ImageBackground source={require('./img/estadio.jpg')} style={styles.imageBackground}>
+
+      <View style={styles.bodyContainer}>
+
+        <View style={styles.loginContainer}>
+          
+          <View style={styles.profileImage}> 
+          <Image style={styles.roundedImage} source={require('./img/pngfind.com-bite-mark-png-631239.png')} />
+          </View>
+
+          <View style={styles.loginCard}>
+            
+            <Text style={styles.loginTitle}>Login</Text>
+
+            <View style={styles.inputWrapper}>
+              <TextInput style={styles.inputField} placeholder="username" />
+            </View>
+
+            <View style={styles.inputWrapper}>
+              <TextInput style={styles.inputField} placeholder="password" secureTextEntry />
+            </View>
+
+            <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+              <Text style={styles.loginButtonText}>Login</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.CadastroButton} onPress={handleCadastro}>
+              <Text style={styles.CadastroButtonText}>Clique aqui para se cadastrar no nosso site!!</Text>
+            </TouchableOpacity>
+
+          </View>
+          
         </View>
-        <View style={styles.inputWrapper}>
-          <TextInput style={styles.inputField} placeholder="password" secureTextEntry />
         </View>
-        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-          <Text style={styles.loginButtonText}>Login</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.CadastroButton} onPress={handleCadastro}>
-          <Text style={styles.CadastroButtonText}>Clique aqui para se cadastrar no nosso site!!</Text>
-        </TouchableOpacity>
-      </View>
-      
-    </View>
-    </ImageBackground>
+      </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   loginContainer: {
-    backgroundColor: 'red',
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'linear-gradient(to bottom, #3498db, #2980b9)',
   },
-
   profileImage: {
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
   },
-
+  bodyContainer: {
+    justifyContent: 'center',
+    height: '80%',
+    width: '100%',
+  },
   roundedImage: {
     width: 120,
     height: 120,
@@ -72,9 +83,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 10,
   },
-
+  imageBackground: {
+    flex: 1,
+    resizeMode: 'cover'
+  },
   loginCard: {
-    backgroundColor: '#faebd7',
+    backgroundColor: 'white',
     borderColor: 'black',
     borderRadius: 10,
     shadowColor: '#000',
