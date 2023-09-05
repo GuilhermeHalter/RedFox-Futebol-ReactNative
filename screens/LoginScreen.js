@@ -37,11 +37,11 @@ const LoginScreen = () => {
             <Text style={styles.loginTitle}>Login</Text>
 
             <View style={styles.inputWrapper}>
-              <TextInput style={styles.inputField} placeholder="username" />
+              <TextInput style={styles.inputField} placeholder="Usuário" />
             </View>
 
             <View style={styles.inputWrapper}>
-              <TextInput style={styles.inputField} placeholder="password" secureTextEntry />
+              <TextInput style={styles.inputField} placeholder="Senha" secureTextEntry />
             </View>
 
             <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f9f9f9',
     borderRadius: 5,
     marginBottom: 15,
+    color: 'grey'
   },
   loginButton: {
     backgroundColor: '#27ae60',
@@ -138,6 +139,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     textAlign: 'center',
   },
+  
 });
 
 export default LoginScreen;

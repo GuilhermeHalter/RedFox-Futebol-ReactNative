@@ -7,6 +7,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.bodyContainer}>
 
+
         <View style={styles.container}>
           <View style={styles.menu}>
             <Text style={styles.menuItem}>Home</Text>
@@ -17,9 +18,11 @@ const HomeScreen = () => {
           </View>
         </View>
 
-      <ImageBackground source={require('./img/estadio.jpg')}>
+      
 
         <View style={styles.container}>
+
+        <ImageBackground source={require('./img/estadio.jpg')}>
           
             <View style={styles.content}>
 
@@ -69,9 +72,11 @@ const HomeScreen = () => {
               </View>
 
             </View>
+
+            </ImageBackground>
+
         </View>
 
-      </ImageBackground>
 
     </View>
 
@@ -81,29 +86,25 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#f2f2f2',
-    display:'flex',
-    
+    margin: 0
   },
   menu: {
     flexDirection: 'row',
     alignItems: 'center',
-    height: 60,
-    width:'center',
-    backgroundColor:'gray'
+    backgroundColor:'gray',
+    padding:'20px',
   },
   menuItem: {
     padding: '20',
     color: '#fff',
     fontSize: 18,
     marginRight:10,
-    color:'black'
+    color:'black',
   },
   searchBar: {
     flexDirection: 'row',
     backgroundColor: '#fff',
-
     borderBottomColor: '#ccc',
     borderRadius: 5,
   },
@@ -122,6 +123,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
+    alignItems: 'center',
+    padding: '30px'
   },
   contentText: {
     fontSize: 24,
@@ -130,8 +133,9 @@ const styles = StyleSheet.create({
     color: '#555',
   },
   imageRow: {
-    flexDirection: 'row',
     justifyContent: 'space-between',
+    display: 'flex',
+    padding:'10px'
   },
   column: {
     alignItems: 'center',
