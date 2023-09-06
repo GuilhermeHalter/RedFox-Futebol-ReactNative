@@ -1,7 +1,6 @@
 import React from 'react';
 import LupaIcon from './img/pngwing.com.png';
-import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
 
 const HomeScreen = () => {
   return (
@@ -21,8 +20,6 @@ const HomeScreen = () => {
       
 
         <View style={styles.container}>
-
-        <ImageBackground source={require('./img/estadio.jpg')}>
           
             <View style={styles.content}>
 
@@ -31,11 +28,11 @@ const HomeScreen = () => {
               <View style={styles.imageRow}>
                 
                 <View style={styles.column}>
-                  <Image source={require('./img/bahia.png')} style={styles.image} />
+                  <Image source={require('./img/Verde.png')} style={styles.image} />
 
                   <Text style={styles.vsText}>VS</Text>
 
-                  <Image source={require('./img/fla.png')} style={styles.image} />
+                  <Image source={require('./img/Flamengo.png')} style={styles.image} />
 
                   <TouchableOpacity style={styles.CompraButton}>
                     <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
@@ -45,9 +42,9 @@ const HomeScreen = () => {
                 
                 <View style={styles.column}>
 
-                  <Image source={require('./img/atlpr.png')} style={styles.image} />
+                  <Image source={require('./img/São Paulo.png')} style={styles.image} />
                   <Text style={styles.vsText}>VS</Text>
-                  <Image source={require('./img/coritiba.png')} style={styles.image} />
+                  <Image source={require('./img/Cap.png')} style={styles.image} />
 
                   <TouchableOpacity style={styles.CompraButton}>
                     <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
@@ -57,11 +54,11 @@ const HomeScreen = () => {
 
                 <View style={styles.column}>
 
-                  <Image source={require('./img/botafogo.gif')} style={styles.image} />
+                  <Image source={require('./img/America.png')} style={styles.image} />
 
                   <Text style={styles.vsText}>VS</Text>
 
-                  <Image source={require('./img/atletico.png')} style={styles.image} />
+                  <Image source={require('./img/Corinthians.png')} style={styles.image} />
 
                   <TouchableOpacity style={styles.CompraButton}>
                     <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
@@ -73,7 +70,6 @@ const HomeScreen = () => {
 
             </View>
 
-            </ImageBackground>
 
         </View>
 
@@ -87,7 +83,8 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#f2f2f2',
-    margin: 0
+    margin: 0,
+    display:'flex'
   },
   menu: {
     flexDirection: 'row',
@@ -139,6 +136,7 @@ const styles = StyleSheet.create({
   },
   column: {
     alignItems: 'center',
+    padding:'10px'
   },
   image: {
     width: '90px',
@@ -151,7 +149,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   CompraButton: {
-    backgroundColor: '#27ae60',
+    backgroundColor: '#800000',
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,

@@ -26,16 +26,16 @@ const CadastroScreen = () => {
           <View style={styles.CadastroCard}>
             <Text style={styles.CadastroTitle}>Cadastro</Text>
           <View style={styles.inputWrapper}>
-           <TextInput style={styles.inputField} placeholder="username" />
+           <TextInput style={styles.inputField} placeholder="Nome de usuário" />
           </View>
             <View style={styles.inputWrapper}>
-              <TextInput style={styles.inputField} placeholder="Email" />
+              <TextInput style={styles.inputField} placeholder="E-mail" />
             </View>
          <View style={styles.inputWrapper}>
-           <TextInput style={styles.inputField} placeholder="password" />
+           <TextInput style={styles.inputField} placeholder="Senha" />
          </View>
          <View style={styles.inputWrapper}>
-           <TextInput style={styles.inputField} placeholder="confirm password" secureTextEntry />
+           <TextInput style={styles.inputField} placeholder="Confirme sua senha" secureTextEntry />
          </View>
          <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
            <Text style={styles.loginButtonText}>Login</Text>
@@ -107,9 +107,10 @@ const CadastroScreen = () => {
      width: '100%',
      padding: 12,
      fontSize: 16,
-     backgroundColor: '#f9f9f9',
+     backgroundColor: '#dcdcdc',
      borderRadius: 5,
      marginBottom: 15,
+     color: 'gray'
    },
    loginButton: {
      backgroundColor: '#27ae60',
