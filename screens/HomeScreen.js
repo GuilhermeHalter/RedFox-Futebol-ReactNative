@@ -1,6 +1,8 @@
 import React from 'react';
 import LupaIcon from './img/pngwing.com.png';
 import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
+import TimesbrList from '../components/TimesList'
+
 
 const HomeScreen = () => {
   return (
@@ -68,12 +70,14 @@ const HomeScreen = () => {
 
               </View>
 
+            
+
             </View>
 
 
         </View>
 
-
+          <TimesbrList />
     </View>
 
   );
