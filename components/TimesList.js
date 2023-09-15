@@ -34,9 +34,12 @@ const TimesbrList = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    position: 'absolute',
+    bottom: 0, // Position it at the bottom of the screen
+    left: 0,
+    right: 0, // Stretch it horizontally to the edges
     backgroundColor: '#00b5b2',
-    paddingHorizontal: 20,
+    height: 30, // Set a fixed height (30px)
   },
   horarioItem: {
     marginBottom: 10,

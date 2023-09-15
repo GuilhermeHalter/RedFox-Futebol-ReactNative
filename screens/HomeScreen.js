@@ -30,7 +30,7 @@ const HomeScreen = () => {
               <View style={styles.imageRow}>
                 
                 <View style={styles.column}>
-                  <Image source={require('./img/Verde.png')} style={styles.image} />
+                  <Image source={require('./img/América Mineiro.png')} style={styles.image} />
 
                   <Text style={styles.vsText}>VS</Text>
 
@@ -46,7 +46,7 @@ const HomeScreen = () => {
 
                   <Image source={require('./img/São Paulo.png')} style={styles.image} />
                   <Text style={styles.vsText}>VS</Text>
-                  <Image source={require('./img/Cap.png')} style={styles.image} />
+                  <Image source={require('./img/Santos.png')} style={styles.image} />
 
                   <TouchableOpacity style={styles.CompraButton}>
                     <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
@@ -56,11 +56,50 @@ const HomeScreen = () => {
 
                 <View style={styles.column}>
 
-                  <Image source={require('./img/America.png')} style={styles.image} />
+                  <Image source={require('./img/Vasco da Gama.png')} style={styles.image} />
 
                   <Text style={styles.vsText}>VS</Text>
 
                   <Image source={require('./img/Corinthians.png')} style={styles.image} />
+
+                  <TouchableOpacity style={styles.CompraButton}>
+                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
+                  </TouchableOpacity>
+
+                </View>
+
+                <View style={styles.column}>
+                  <Image source={require('./img/Fortaleza.png')} style={styles.image} />
+
+                  <Text style={styles.vsText}>VS</Text>
+
+                  <Image source={require('./img/Palmeiras.png')} style={styles.image} />
+
+                  <TouchableOpacity style={styles.CompraButton}>
+                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
+                  </TouchableOpacity>
+
+                </View>
+
+                <View style={styles.column}>
+                  <Image source={require('./img/Internacional.png')} style={styles.image} />
+
+                  <Text style={styles.vsText}>VS</Text>
+
+                  <Image source={require('./img/Red Bull Bragantino.png')} style={styles.image} />
+
+                  <TouchableOpacity style={styles.CompraButton}>
+                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
+                  </TouchableOpacity>
+
+                </View>
+
+                <View style={styles.column}>
+                  <Image source={require('./img/Grêmio.png')} style={styles.image} />
+
+                  <Text style={styles.vsText}>VS</Text>
+
+                  <Image source={require('./img/Cruzeiro.png')} style={styles.image} />
 
                   <TouchableOpacity style={styles.CompraButton}>
                     <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
@@ -83,36 +122,36 @@ const HomeScreen = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
+  bodyContainer: {
+    flex: 1, },
   container: {
     backgroundColor: '#f2f2f2',
-    margin: 0,
-    display:'flex'
+    flex: 1, 
   },
   menu: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor:'gray',
-    padding:'20px',
+    backgroundColor: 'gray',
+    padding: 20, 
   },
   menuItem: {
-    padding: '20',
+    padding: 20, 
     color: '#fff',
     fontSize: 18,
-    marginRight:10,
-    color:'black',
+    marginRight: 10,
   },
   searchBar: {
     flexDirection: 'row',
     backgroundColor: '#fff',
     borderBottomColor: '#ccc',
     borderRadius: 5,
+    flex: 1, 
   },
   lupaIcon: {
     width: 20,
     height: 20,
-    marginTop:5, 
+    marginTop: 5,
     tintColor: '#555',
   },
   searchInput: {
@@ -125,7 +164,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     alignItems: 'center',
-    padding: '30px'
+    padding: 30, 
   },
   contentText: {
     fontSize: 24,
@@ -134,17 +173,19 @@ const styles = StyleSheet.create({
     color: '#555',
   },
   imageRow: {
+    flexDirection: 'row',
     justifyContent: 'space-between',
-    display: 'flex',
-    padding:'10px'
+    flexWrap: 'wrap', 
+    padding: 10,
   },
   column: {
     alignItems: 'center',
-    padding:'10px'
+    padding: 10,
+    flexBasis: '48%', 
   },
   image: {
-    width: '90px',
-    height: '90px',
+    width: 90, 
+    height: 90, 
     marginBottom: 10,
   },
   vsText: {
