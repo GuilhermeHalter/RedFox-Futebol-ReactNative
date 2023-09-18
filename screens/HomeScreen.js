@@ -1,10 +1,18 @@
 import React from 'react';
 import LupaIcon from './img/pngwing.com.png';
 import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
-import TimesbrList from '../components/TimesList'
+import TimesbrList from '../components/TimesList';
+import { useNavigation } from '@react-navigation/native';
 
 
 const HomeScreen = () => {
+
+  const navigation = useNavigation();
+
+  const handleComprarIngresso = () => {
+    navigation.navigate('Ingresso'); 
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.menu}>
@@ -23,8 +31,11 @@ const HomeScreen = () => {
             <Image source={require('./img/América Mineiro.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
             <Image source={require('./img/Flamengo.png')} style={styles.image} />
-            <TouchableOpacity style={styles.compraButton}>
-              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            <TouchableOpacity
+              style={styles.compraButton}
+              onPress={handleComprarIngresso} 
+              >
+            <Text style={styles.compraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
           
@@ -32,8 +43,11 @@ const HomeScreen = () => {
             <Image source={require('./img/São Paulo.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
             <Image source={require('./img/Santos.png')} style={styles.image} />
-            <TouchableOpacity style={styles.compraButton}>
-              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            <TouchableOpacity
+              style={styles.compraButton}
+              onPress={handleComprarIngresso} 
+              >
+            <Text style={styles.compraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
 
@@ -41,8 +55,11 @@ const HomeScreen = () => {
             <Image source={require('./img/Vasco da Gama.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
             <Image source={require('./img/Internacional.png')} style={styles.image} />
-            <TouchableOpacity style={styles.compraButton}>
-              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            <TouchableOpacity
+              style={styles.compraButton}
+              onPress={handleComprarIngresso} 
+              >
+            <Text style={styles.compraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
 
@@ -50,8 +67,11 @@ const HomeScreen = () => {
             <Image source={require('./img/Palmeiras.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
             <Image source={require('./img/Grêmio.png')} style={styles.image} />
-            <TouchableOpacity style={styles.compraButton}>
-              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            <TouchableOpacity
+              style={styles.compraButton}
+              onPress={handleComprarIngresso} 
+              >
+            <Text style={styles.compraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
 
@@ -59,8 +79,11 @@ const HomeScreen = () => {
             <Image source={require('./img/América Mineiro.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
             <Image source={require('./img/Flamengo.png')} style={styles.image} />
-            <TouchableOpacity style={styles.compraButton}>
-              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            <TouchableOpacity
+              style={styles.compraButton}
+              onPress={handleComprarIngresso} 
+              >
+            <Text style={styles.compraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
 

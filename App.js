@@ -5,6 +5,7 @@ import { ImageBackground } from 'react-native-web';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import CadastroScreen from './screens/CadastroScreen';
+import IngressoScreen from './screens/IngressoScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ const App = () => {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Cadastro" component={CadastroScreen} />
+        <Stack.Screen name="Ingresso" component={IngressoScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
