@@ -10,7 +10,7 @@ const HomeScreen = () => {
       <View style={styles.menu}>
         <Text style={styles.menuItem}>Home</Text>
         <View style={styles.searchBar}>
-          <TextInput placeholder="Search" style={styles.searchInput} />
+          <TextInput placeholder="Buscar" style={styles.searchInput} />
           <Image source={LupaIcon} style={styles.lupaIcon} />
         </View>
       </View>
@@ -49,16 +49,25 @@ const HomeScreen = () => {
           <View style={styles.column}>
             <Image source={require('./img/Palmeiras.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/Grêmio.png')} style={styles.image} />
+            <Image source={require('./img/Corinthians.png')} style={styles.image} />
             <TouchableOpacity style={styles.compraButton}>
               <Text style={styles.compraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.column}>
-            <Image source={require('./img/América Mineiro.png')} style={styles.image} />
+            <Image source={require('./img/Red Bull Bragantino.png')} style={styles.image} />
             <Text style={styles.vsText}>VS</Text>
-            <Image source={require('./img/Flamengo.png')} style={styles.image} />
+            <Image source={require('./img/Fluminense.png')} style={styles.image} />
+            <TouchableOpacity style={styles.compraButton}>
+              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.column}>
+            <Image source={require('./img/Grêmio.png')} style={styles.image} />
+            <Text style={styles.vsText}>VS</Text>
+            <Image source={require('./img/Vasco da Gama.png')} style={styles.image} />
             <TouchableOpacity style={styles.compraButton}>
               <Text style={styles.compraButtonText}>Comprar ingresso</Text>
             </TouchableOpacity>
@@ -118,7 +127,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginBottom: 20,
     textAlign: 'center',
-    color: '#555',
+    color: 'black',
   },
   imageRow: {
     flexDirection: 'row',
@@ -138,7 +147,7 @@ const styles = StyleSheet.create({
   },
   vsText: {
     fontSize: 18,
-    color: '#555',
+    color: '#black',
     marginVertical: 5,
   },
   compraButton: {
