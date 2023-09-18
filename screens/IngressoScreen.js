@@ -1,30 +1,48 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; // Import the useNavigation hook
 
 const IngressoScreen = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Compra de Ingresso</Text>
-      <View style={styles.ticketContainer}>
-        <Text style={styles.ticketTitle}>Escolha o tipo de ingresso:</Text>
-        <TouchableOpacity style={styles.ticketOption}>
-          <Text style={styles.optionText}>Ingresso Padrão</Text>
-          <Text style={styles.optionPrice}>R$ 50</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ticketOption}>
-          <Text style={styles.optionText}>Ingresso VIP</Text>
-          <Text style={styles.optionPrice}>R$ 100</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ticketOption}>
-          <Text style={styles.optionText}>Ingresso Premium</Text>
-          <Text style={styles.optionPrice}>R$ 150</Text>
-        </TouchableOpacity>
+    const navigation = useNavigation();
+    
+    const [selectedPrice, setSelectedPrice] = useState(0);
+    
+    const handleSelectTicket = (price) => {
+      setSelectedPrice(price);
+    };
+  
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>Compra de Ingresso</Text>
+        <View style={styles.ticketContainer}>
+          <Text style={styles.ticketTitle}>Escolha o tipo de ingresso:</Text>
+          <TouchableOpacity
+            style={styles.ticketOption}
+            onPress={() => handleSelectTicket(50)} // Update price when ticket is selected
+          >
+            <Text style={styles.optionText}>Ingresso Padrão</Text>
+            <Text style={styles.optionPrice}>R$ 50</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.ticketOption}
+            onPress={() => handleSelectTicket(100)} // Update price when ticket is selected
+          >
+            <Text style={styles.optionText}>Ingresso VIP</Text>
+            <Text style={styles.optionPrice}>R$ 100</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.ticketOption}
+            onPress={() => handleSelectTicket(150)} // Update price when ticket is selected
+          >
+            <Text style={styles.optionText}>Ingresso Premium</Text>
+            <Text style={styles.optionPrice}>R$ 150</Text>
+          </TouchableOpacity>
+        </View>
+        <Text style={styles.total}>Total: R$ {selectedPrice}</Text>
+        <Text style={styles.instructions}>Toque em um ingresso para comprar.</Text>
       </View>
-      <Text style={styles.total}>Total: R$ 50</Text>
-      <Text style={styles.instructions}>Toque em um ingresso para comprar.</Text>
-    </View>
-  );
-};
+    );
+  };
 
 const styles = StyleSheet.create({
   container: {
