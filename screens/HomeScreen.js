@@ -6,137 +6,85 @@ import TimesbrList from '../components/TimesList'
 
 const HomeScreen = () => {
   return (
-    <View style={styles.bodyContainer}>
+    <View style={styles.container}>
+      <View style={styles.menu}>
+        <Text style={styles.menuItem}>Home</Text>
+        <View style={styles.searchBar}>
+          <TextInput placeholder="Search" style={styles.searchInput} />
+          <Image source={LupaIcon} style={styles.lupaIcon} />
+        </View>
+      </View>
 
-
-        <View style={styles.container}>
-          <View style={styles.menu}>
-            <Text style={styles.menuItem}>Home</Text>
-            <View style={styles.searchBar}>
-              <TextInput placeholder="Search" style={styles.searchInput} />
-              <Image source={LupaIcon} style={styles.lupaIcon} />
-            </View>
+      <View style={styles.content}>
+        <Text style={styles.contentText}>Jogos da semana</Text>
+        
+        <View style={styles.imageRow}>
+          <View style={styles.column}>
+            <Image source={require('./img/América Mineiro.png')} style={styles.image} />
+            <Text style={styles.vsText}>VS</Text>
+            <Image source={require('./img/Flamengo.png')} style={styles.image} />
+            <TouchableOpacity style={styles.compraButton}>
+              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            </TouchableOpacity>
           </View>
-        </View>
-
-      
-
-        <View style={styles.container}>
           
-            <View style={styles.content}>
+          <View style={styles.column}>
+            <Image source={require('./img/São Paulo.png')} style={styles.image} />
+            <Text style={styles.vsText}>VS</Text>
+            <Image source={require('./img/Santos.png')} style={styles.image} />
+            <TouchableOpacity style={styles.compraButton}>
+              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            </TouchableOpacity>
+          </View>
 
-              <Text style={styles.contentText}>Jogos da semana</Text>
-              
-              <View style={styles.imageRow}>
-                
-                <View style={styles.column}>
-                  <Image source={require('./img/América Mineiro.png')} style={styles.image} />
+          <View style={styles.column}>
+            <Image source={require('./img/Vasco da Gama.png')} style={styles.image} />
+            <Text style={styles.vsText}>VS</Text>
+            <Image source={require('./img/Internacional.png')} style={styles.image} />
+            <TouchableOpacity style={styles.compraButton}>
+              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            </TouchableOpacity>
+          </View>
 
-                  <Text style={styles.vsText}>VS</Text>
+          <View style={styles.column}>
+            <Image source={require('./img/Palmeiras.png')} style={styles.image} />
+            <Text style={styles.vsText}>VS</Text>
+            <Image source={require('./img/Grêmio.png')} style={styles.image} />
+            <TouchableOpacity style={styles.compraButton}>
+              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            </TouchableOpacity>
+          </View>
 
-                  <Image source={require('./img/Flamengo.png')} style={styles.image} />
-
-                  <TouchableOpacity style={styles.CompraButton}>
-                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-                  </TouchableOpacity>
-
-                </View>
-                
-                <View style={styles.column}>
-
-                  <Image source={require('./img/São Paulo.png')} style={styles.image} />
-                  <Text style={styles.vsText}>VS</Text>
-                  <Image source={require('./img/Santos.png')} style={styles.image} />
-
-                  <TouchableOpacity style={styles.CompraButton}>
-                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-                  </TouchableOpacity>
-
-                </View>
-
-                <View style={styles.column}>
-
-                  <Image source={require('./img/Vasco da Gama.png')} style={styles.image} />
-
-                  <Text style={styles.vsText}>VS</Text>
-
-                  <Image source={require('./img/Corinthians.png')} style={styles.image} />
-
-                  <TouchableOpacity style={styles.CompraButton}>
-                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-                  </TouchableOpacity>
-
-                </View>
-
-                <View style={styles.column}>
-                  <Image source={require('./img/Fortaleza.png')} style={styles.image} />
-
-                  <Text style={styles.vsText}>VS</Text>
-
-                  <Image source={require('./img/Palmeiras.png')} style={styles.image} />
-
-                  <TouchableOpacity style={styles.CompraButton}>
-                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-                  </TouchableOpacity>
-
-                </View>
-
-                <View style={styles.column}>
-                  <Image source={require('./img/Internacional.png')} style={styles.image} />
-
-                  <Text style={styles.vsText}>VS</Text>
-
-                  <Image source={require('./img/Red Bull Bragantino.png')} style={styles.image} />
-
-                  <TouchableOpacity style={styles.CompraButton}>
-                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-                  </TouchableOpacity>
-
-                </View>
-
-                <View style={styles.column}>
-                  <Image source={require('./img/Grêmio.png')} style={styles.image} />
-
-                  <Text style={styles.vsText}>VS</Text>
-
-                  <Image source={require('./img/Cruzeiro.png')} style={styles.image} />
-
-                  <TouchableOpacity style={styles.CompraButton}>
-                    <Text style={styles.CompraButtonText}>Comprar ingresso</Text>
-                  </TouchableOpacity>
-
-                </View>
-
-              </View>
-
-            
-
-            </View>
-
+          <View style={styles.column}>
+            <Image source={require('./img/América Mineiro.png')} style={styles.image} />
+            <Text style={styles.vsText}>VS</Text>
+            <Image source={require('./img/Flamengo.png')} style={styles.image} />
+            <TouchableOpacity style={styles.compraButton}>
+              <Text style={styles.compraButtonText}>Comprar ingresso</Text>
+            </TouchableOpacity>
+          </View>
 
         </View>
 
-          <TimesbrList />
+        <TimesbrList />
+      </View>
     </View>
-
   );
 };
 
 const styles = StyleSheet.create({
-  bodyContainer: {
-    flex: 1, },
   container: {
+    flex: 1,
     backgroundColor: '#f2f2f2',
-    flex: 1, 
   },
   menu: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'gray',
-    padding: 20, 
+    padding: 20,
   },
   menuItem: {
-    padding: 20, 
+    padding: 20,
     color: '#fff',
     fontSize: 18,
     marginRight: 10,
@@ -146,7 +94,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderBottomColor: '#ccc',
     borderRadius: 5,
-    flex: 1, 
+    flex: 1,
   },
   lupaIcon: {
     width: 20,
@@ -164,7 +112,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     alignItems: 'center',
-    padding: 30, 
+    padding: 30,
   },
   contentText: {
     fontSize: 24,
@@ -175,17 +123,17 @@ const styles = StyleSheet.create({
   imageRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    flexWrap: 'wrap', 
+    flexWrap: 'wrap',
     padding: 10,
   },
   column: {
     alignItems: 'center',
     padding: 10,
-    flexBasis: '48%', 
+    flexBasis: '48%',
   },
   image: {
-    width: 90, 
-    height: 90, 
+    width: 90,
+    height: 90,
     marginBottom: 10,
   },
   vsText: {
@@ -193,14 +141,14 @@ const styles = StyleSheet.create({
     color: '#555',
     marginVertical: 5,
   },
-  CompraButton: {
+  compraButton: {
     backgroundColor: '#800000',
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
     marginTop: 10,
   },
-  CompraButtonText: {
+  compraButtonText: {
     color: '#fff',
     fontSize: 16,
     textAlign: 'center',

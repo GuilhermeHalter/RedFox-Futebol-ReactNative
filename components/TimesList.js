@@ -17,14 +17,14 @@ const TimesbrList = () => {
 
   return (
     <View style={styles.container}>
-      <Text><h2>Time!</h2></Text>
+      <Text style={styles.header}><h2>Time!</h2></Text>
       <Text>Todos os times do Brasileirão:</Text>
       <FlatList
         data={Times}
         keyExtractor={(item) => item.id.toString()} 
         renderItem={({ item }) => (
           <View style={styles.horarioItem}>
-            <Text>{item.nome}</Text>
+            <Text style={styles.timeName}>{item.nome}</Text>
           </View>
         )}
       />
@@ -34,18 +34,25 @@ const TimesbrList = () => {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    bottom: 0, // Position it at the bottom of the screen
-    left: 0,
-    right: 0, // Stretch it horizontally to the edges
+    flex: 1,
     backgroundColor: '#00b5b2',
-    height: 30, // Set a fixed height (30px)
+    padding: 10,
+  },
+  header: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginBottom: 10,
   },
   horarioItem: {
     marginBottom: 10,
     padding: 10,
     backgroundColor: '#fff',
     borderRadius: 5,
+  },
+  timeName: {
+    fontSize: 16,
+    color: '#333',
   },
 });
 
